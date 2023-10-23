@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <link rel="stylesheet" href="style6.css" />
+</head>
+<body>
+    <!-- <div>
+        <ul>
+            <li>one</li>
+            <li>two</li>
+            <li>three</li>
+        </ul>
+    </div> -->
+
+    <h1>Todo APP</h1>
+    <input placeholder="enter your task">
+    <button>Add Task</button>
+    <ul>
+        <li>eat</li>
+        <li>sleep</li>
+    </ul>
+    <script src="app9.js"></script>
+</body>
+</html>
+
+
+
+
+
+#CSS 
+div {
+    height: 200px;
+    width: 400px;
+    background-color: pink;
+}
+
+ul {
+    background-color: blue;
+}
+
+li {
+    background-color: greenyellow;
+} 
+
+
+
+
+
+#JS
+
+let btn = document.querySelector("button");
+let ul = document.querySelector("ul");
+let inp = document.querySelector("input");
+
+btn.addEventListener("click", function() {
+    let item = document.createElement("li");
+    item.innerText = inp.value;
+    ul.appendChild(item);
+    console.log(inp.value);
+    inp.value= "";
+})
